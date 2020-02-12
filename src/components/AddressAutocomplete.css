@@ -1,0 +1,11 @@
+.name-list {
+  position: absolute;
+  z-index: 1;
+}
+
+.address-name:hover {
+  color: #39f;
+}
+li.address-name {
+  cursor: pointer;
+}
