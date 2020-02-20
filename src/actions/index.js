@@ -18,13 +18,27 @@ export const fetchRoutes = (location) => async (dispatch) => {
           ) {
             itineraries {
               legs {
+                mode
                 startTime
                 endTime
-                mode
-                duration
-                realTime
-                distance
-                transitLeg
+                from {
+                  lat
+                  lon
+                  name
+                  stop {
+                    code
+                    name
+                  }
+                }
+                to {
+                  lat
+                  lon
+                  name
+                  stop {
+                    code
+                    name
+                  }
+                }
               }
             }
           }
