@@ -1,13 +1,11 @@
 import axios from 'axios';
 
 export const fetchRoutes = (location) => async (dispatch) => {
-  dispatch(
-    {
-      type: 'LOADING_ROUTES',
-      payload: true
-    },
-    { type: 'RESET_POLYLINE', payload: null }
-  );
+  //dispatch loading to true begining of fetch
+  dispatch({
+    type: 'LOADING_ROUTES',
+    payload: true
+  });
   let payload;
   let type;
   try {

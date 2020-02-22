@@ -25,6 +25,8 @@ function Routes(prop) {
       </div>
     ));
   };
+
+  //icon css for transport mode
   const modeIcon = (mode) => {
     switch (mode) {
       case 'WALK':
