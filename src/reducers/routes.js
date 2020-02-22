@@ -2,7 +2,8 @@ const initialState = {
   type: 'DEFAULT',
   route: {
     message: 'Please add the route'
-  }
+  },
+  loading: false
 };
 
 export default (state = initialState, action) => {
@@ -16,6 +17,8 @@ export default (state = initialState, action) => {
     case 'FETCH_ROUTES_EMPTY':
       return { ...state, type: 'EMPTY', route: action.payload };
 
+    case 'LOADING_ROUTES':
+      return { ...state, type: 'LOADING', route: action.payload };
     default:
       return state;
   }

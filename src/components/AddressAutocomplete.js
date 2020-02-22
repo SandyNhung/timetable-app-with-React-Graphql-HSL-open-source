@@ -3,11 +3,13 @@ import './AddressAutocomplete.css';
 import axios from 'axios';
 
 function AddressAutocomplete(prop) {
+  //list of address from autocomplete address fetch
   const [addressAutoComplete, setAddressAutoComplete] = useState(false);
   const [inputAddress, setInputAddress] = useState();
 
   const addressAutocomplete = async (value) => {
     if (value && value.length > 2) {
+      //fetch autocomplete address
       const res = await axios.get(
         `https://api.digitransit.fi/geocoding/v1/autocomplete?text=${value}&layers=address`
       );
@@ -30,7 +32,7 @@ function AddressAutocomplete(prop) {
                 onClick={() => {
                   setInputAddress(e.properties.name);
                   setAddressAutoComplete(false);
-                  prop.setAddress(e.geometry);
+                  prop.setAddress(e);
                 }}
               >
                 {e.properties.name}

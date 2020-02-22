@@ -9,3 +9,10 @@
 li.address-name {
   cursor: pointer;
 }
+.uk-form-horizontal .uk-form-label {
+  width: 0;
+}
+
+.uk-form-horizontal .uk-form-controls {
+  margin-left: 50px;
+}
