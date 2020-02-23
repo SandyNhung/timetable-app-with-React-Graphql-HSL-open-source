@@ -15,3 +15,7 @@ npm version: 6.12.0
 To find public docker hub of this app:
 
 ### `nhungsandy/eficode_preassignment`
+
+Link to application, need a few minutes to loading the page
+
+### https://eficode-navigation-timetable.herokuapp.com/
